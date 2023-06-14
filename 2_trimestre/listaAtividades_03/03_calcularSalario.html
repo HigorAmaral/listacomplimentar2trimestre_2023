@@ -15,9 +15,22 @@
     */
 
     // Entrada
-    
+    const salario = Number(prompt("Informe o valor do seu salário!").replace(",", ".").trim());
+    let conta = 0
     // Processamento
+    if (salario <= 2.000) {
+        conta = salario + ((salario * 15) / 100)
+        alert(`o seu salário sera de ${conta}`);
 
+    }
+    else if (salario >= 2.000) {
+        conta = salario + ((salario * 10) / 100)
+        alert(`o seu salário sera de ${conta}`);
+    }
+    else if (salario >= 4.000) {
+        conta = salario + ((salario * 7.5) / 100)
+        alert(`o seu salário sera de ${conta}`);
+    }
     // Saída
 
 </script>
