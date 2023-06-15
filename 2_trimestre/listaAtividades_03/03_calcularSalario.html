@@ -15,21 +15,24 @@
     */
 
     // Entrada
-    const salario = Number(prompt("Informe o valor do seu salário!").replace(",", ".").trim());
-    let conta = 0
-    // Processamento
-    if (salario <= 2.000) {
-        conta = salario + ((salario * 15) / 100)
-        alert(`o seu salário sera de ${conta}`);
+    const Salario = Number(prompt(`Insiria o seu salário atual`))
+    let conta = 0;
 
+    if (Salario <= 2000) {
+        conta = Salario + ((Salario * 15) / 100)
+        document.write(`O resultado do seu reajuste de salário  foi de 15%  e seu salaŕio agora é  ${conta}`)
     }
-    else if (salario >= 2.000) {
-        conta = salario + ((salario * 10) / 100)
-        alert(`o seu salário sera de ${conta}`);
+    else if (Salario > 2000 && Salario <= 4000) {
+        conta = Salario + ((Salario * 10) / 100)
+        document.write(`O resultado do seu reajuste de salário foi de 10%  e seu salaŕio agora é ${conta}`)
     }
-    else if (salario >= 4.000) {
-        conta = salario + ((salario * 7.5) / 100)
-        alert(`o seu salário sera de ${conta}`);
+    else if (Salario > 4000 && Salario <= 7000) {
+        conta = Salario + ((Salario * 7.5) / 100)
+        document.write(`O resultado do seu reajuste de salário  foi de 7.5%%  e seu salaŕio agora é  ${conta}`)
+    }
+    else if (Salario > 7000) {
+        conta = Salario + ((Salario * 7) / 100)
+        document.write(`O resultado do seu reajuste de salário foi de 7%  e seu salaŕio agora é ${conta}`)
     }
     // Saída
 

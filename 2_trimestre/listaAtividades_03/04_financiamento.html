@@ -10,8 +10,30 @@
     */
 
     // Entrada
-    
+    const preco = Number(prompt(`Insira o valor do imovel`).trim().replace(",", "."));
+    const tempo = Number(prompt(`Insira a quantidade de prestrações em meses ("Pode parcelar até 360 meses")`).trim().replace(",", "."));
+    const salario = Number(prompt(`Insira o valor do seu salário`).trim().replace(",", "."));
     // Processamento
+
+    const vezes = preco / tempo
+    const taxa = vezes * 0.02
+    const final = vezes + taxa
+    const porcentagem = (salario * 30) / 100
+
+
+    if (tempo <= 360) {
+        if (final <= porcentagem) {
+            document.write(`O valor da parcela será de ${final}, e o financiamento será aceito!!`);
+        }
+        else if (final > porcentagem) {
+            document.write(`O valor da parcela será de ${final}, e o financiamento não será aceito!!`);
+        }
+        else {
+            document.write(`Coloque apenas os números, não é nescessario colocar sínbolo`);
+        }
+    } else {
+        document.write(`Você só pode parcelar até 360 meses!!!`);
+    }
 
     // Saída
 
