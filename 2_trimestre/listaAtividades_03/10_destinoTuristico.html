@@ -15,18 +15,18 @@
     const viagems = Number(prompt("Informe o preço do valor do transporte aéreo para SP e RJ!").trim());
     const hotel = Number(prompt("Informe o valor do preço dos hoteis de SP e RJ!"));
     const diasHotel = Number(prompt("Informe quantos dias pretende ficar no destino!!!"));
-    const onde = prompt("Onde vai ser o seu ultimo destino? se for São Paulo responda(SP) e se for Rio de Janeiro responda (RJ)").toUpperCase().toLowerCase().trim();
+    const onde = prompt("Onde vai ser o seu ultimo destino? se for São Paulo responda(SP) e se for Rio de Janeiro responda (RJ)").toUpperCase().trim();
     // Processamento
-let final = viagems + (hotel * diasHotel);
-if( onde == "SP" ){
-    alert(`O seu ultimo destino é ${onde} e voce irar gastar na viagem será de ${final}!!`);
-}
-else if( onde == "RJ"){
-    alert(`O seu ultimo destino é ${onde} e voce irar gastar na viagem será de ${final}!!`);
-}
-else{
-    alert(`Opcão invalida!!!!`);
-}
+    let final = viagems + (hotel * diasHotel);
+    if (onde == "SP") {
+        alert(`O seu ultimo destino é ${onde} e voce irar gastar na viagem será  $${final} reais!!`);
+    }
+    else if (onde == "RJ") {
+        alert(`O seu ultimo destino é ${onde} e voce irar gastar na viagem será  $${final.toFixed(2).replace(",", ".")} reais!!`);
+    }
+    else {
+        alert(`Opcão invalida!!!!`);
+    }
 
     // Saída
 

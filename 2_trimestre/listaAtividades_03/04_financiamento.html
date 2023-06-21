@@ -23,16 +23,16 @@
 
     if (tempo <= 360) {
         if (final <= porcentagem) {
-            document.write(`O valor da parcela será de ${final}, e o financiamento será aceito!!`);
+            alert(`O valor da parcela será de ${final}, e o financiamento será aceito!!`);
         }
         else if (final > porcentagem) {
-            document.write(`O valor da parcela será de ${final}, e o financiamento não será aceito!!`);
+            alert(`O valor da parcela será de ${final}, e o financiamento não será aceito!!`);
         }
         else {
-            document.write(`Coloque apenas os números, não é nescessario colocar sínbolo`);
+            alert(`Coloque apenas os números, não é nescessario colocar sínbolo`);
         }
     } else {
-        document.write(`Você só pode parcelar até 360 meses!!!`);
+        alert(`Você só pode parcelar até 360 meses!!!`);
     }
 
     // Saída
